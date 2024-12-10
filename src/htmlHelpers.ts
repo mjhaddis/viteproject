@@ -1,9 +1,18 @@
 import { Ipokemon } from "./models/Ipokémon";
 
 export function createHtml (pokemon: Ipokemon) {
-    const pokemonContainer = document.getElementById("pokemoneContainer");
+    const pokemonsContainer = document.getElementById("pokemonContainer");
 
-    if (pokemonContainer) {
-        pokemonContainer.innerHTML = "";
+    if (pokemonsContainer) {
+        pokemonsContainer.innerHTML = "";
     }
-}
+        const pokemonContainer = document.createElement("div");
+        const image = document.createElement("img");
+
+        image.src = pokemon.front_default;
+
+        pokemonContainer.appendChild(image);
+
+        pokemonsContainer?.appendChild(pokemonContainer);
+
+};
